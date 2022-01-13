@@ -19,6 +19,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <fcntl.h>
 
 static char* createJsonCommandString(const LoggerVector* args_)
 {

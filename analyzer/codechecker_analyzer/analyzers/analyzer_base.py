@@ -129,7 +129,6 @@ class SourceAnalyzer(metaclass=ABCMeta):
             command,
             bufsize=-1,
             env=env,
-            preexec_fn=None if sys.platform == 'win32' else os.setsid,
             cwd=cwd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,

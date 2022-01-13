@@ -17,6 +17,7 @@ import json
 import os
 import signal
 import sys
+from multiprocessing import set_start_method
 
 
 class ArgumentParser(argparse.ArgumentParser):
@@ -229,4 +230,5 @@ output.
 
 # -----------------------------------------------------------------------------
 if __name__ == "__main__":
+    set_start_method("spawn")
     main()

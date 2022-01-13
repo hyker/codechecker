@@ -88,7 +88,7 @@ def perform_build_command(logfile, command, context, keep_link, silent=False,
     # Run user's commands in shell.
     else:
         # TODO: better platform detection.
-        if platform.system() == 'Linux':
+        if platform.system() == 'Linux' or platform.system() == "Occlum":
             LOG.debug_analyzer("with ld logger ...")
             # Same as linux's touch.
             open(logfile, 'a', encoding="utf-8", errors="ignore").close()

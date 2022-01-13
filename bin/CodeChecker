@@ -35,7 +35,7 @@ def run_codechecker(checker_env, subcommand=None):
     package_root = os.path.dirname(package_bin)
     lib_dir_path = os.path.join(package_root, 'lib', 'python3')
 
-    checker_env['PYTHONPATH'] = lib_dir_path
+    checker_env['PYTHONPATH'] += ':' + lib_dir_path
     checker_env['CC_BIN_DIR'] = package_bin
 
     python3 = os.path.join('python3')
